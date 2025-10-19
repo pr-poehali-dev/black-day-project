@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { Separator } from '@/components/ui/separator';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -158,26 +159,81 @@ const Index = () => {
               <h2 className="text-5xl md:text-7xl font-bold mb-6 text-accent">Важные ресурсы</h2>
               <Separator className="mb-12 bg-accent" />
               <div className="space-y-6">
-                <Card className="p-6 bg-background border-border">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 rounded-lg bg-accent/10">
-                        <Icon name="Map" size={24} className="text-accent" />
+                <div className="grid md:grid-cols-2 gap-6">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Card className="p-6 bg-background border-border hover:border-accent transition-colors cursor-pointer hover-scale">
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-4">
+                            <div className="p-3 rounded-lg bg-accent/10">
+                              <Icon name="Map" size={24} className="text-accent" />
+                            </div>
+                            <div>
+                              <h3 className="text-xl font-bold">Карта континентов</h3>
+                              <p className="text-muted-foreground text-sm">Юния, Зелграндия, Туринги</p>
+                            </div>
+                          </div>
+                          <div className="rounded-lg overflow-hidden border border-border">
+                            <img 
+                              src="https://cdn.poehali.dev/files/faa0142d-0c12-468a-8b82-ca4374b94c1c.png" 
+                              alt="Карта континентов" 
+                              className="w-full h-auto"
+                            />
+                          </div>
+                        </div>
+                      </Card>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-5xl">
+                      <DialogHeader>
+                        <DialogTitle>Карта континентов и субконтинентов</DialogTitle>
+                      </DialogHeader>
+                      <div className="rounded-lg overflow-hidden">
+                        <img 
+                          src="https://cdn.poehali.dev/files/faa0142d-0c12-468a-8b82-ca4374b94c1c.png" 
+                          alt="Карта континентов" 
+                          className="w-full h-auto"
+                        />
                       </div>
-                      <div>
-                        <h3 className="text-xl font-bold">Карта мира</h3>
-                        <p className="text-muted-foreground">Политическая карта Лиграна</p>
+                    </DialogContent>
+                  </Dialog>
+
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Card className="p-6 bg-background border-border hover:border-accent transition-colors cursor-pointer hover-scale">
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-4">
+                            <div className="p-3 rounded-lg bg-accent/10">
+                              <Icon name="MapPin" size={24} className="text-accent" />
+                            </div>
+                            <div>
+                              <h3 className="text-xl font-bold">Политическая карта</h3>
+                              <p className="text-muted-foreground text-sm">Государства Лиграна</p>
+                            </div>
+                          </div>
+                          <div className="rounded-lg overflow-hidden border border-border">
+                            <img 
+                              src="https://cdn.poehali.dev/files/8855ea32-ee68-4ce9-92e7-9586dd5d74d8.png" 
+                              alt="Политическая карта Лиграна" 
+                              className="w-full h-auto"
+                            />
+                          </div>
+                        </div>
+                      </Card>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-5xl">
+                      <DialogHeader>
+                        <DialogTitle>Политическая карта Лиграна</DialogTitle>
+                      </DialogHeader>
+                      <div className="rounded-lg overflow-hidden">
+                        <img 
+                          src="https://cdn.poehali.dev/files/8855ea32-ee68-4ce9-92e7-9586dd5d74d8.png" 
+                          alt="Политическая карта Лиграна" 
+                          className="w-full h-auto"
+                        />
                       </div>
-                    </div>
-                    <div className="rounded-lg overflow-hidden border border-border">
-                      <img 
-                        src="https://cdn.poehali.dev/files/8855ea32-ee68-4ce9-92e7-9586dd5d74d8.png" 
-                        alt="Политическая карта Лиграна" 
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  </div>
-                </Card>
+                    </DialogContent>
+                  </Dialog>
+                </div>
 
                 {[
                   { title: 'Библиотека историй', desc: 'Полная коллекция произведений вселенной', icon: 'Library' },
