@@ -105,10 +105,10 @@ const Index = () => {
               <Separator className="mb-12 bg-accent" />
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { name: 'Александр Волков', role: 'Главный редактор', icon: 'Crown' },
-                  { name: 'Мария Соколова', role: 'Креативный директор', icon: 'Sparkles' },
-                  { name: 'Дмитрий Орлов', role: 'Лор-мастер', icon: 'BookMarked' },
-                  { name: 'Елена Петрова', role: 'Координатор сообщества', icon: 'Users' },
+                  { role: 'Главный редактор', icon: 'Crown' },
+                  { role: 'Креативный директор', icon: 'Sparkles' },
+                  { role: 'Лор-мастер', icon: 'BookMarked' },
+                  { role: 'Координатор сообщества', icon: 'Users' },
                 ].map((admin, idx) => (
                   <Card key={idx} className="p-6 bg-background border-border hover-scale">
                     <div className="flex items-start gap-4">
@@ -116,8 +116,7 @@ const Index = () => {
                         <Icon name={admin.icon} size={24} className="text-accent" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-1">{admin.name}</h3>
-                        <p className="text-muted-foreground">{admin.role}</p>
+                        <h3 className="text-xl font-bold text-muted-foreground">{admin.role}</h3>
                       </div>
                     </div>
                   </Card>
