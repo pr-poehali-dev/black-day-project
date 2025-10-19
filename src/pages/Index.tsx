@@ -105,19 +105,19 @@ const Index = () => {
               <Separator className="mb-12 bg-accent" />
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { role: 'Основатель', username: '@Bar_golubaya_ustritsa', icon: 'Crown' },
-                  { role: 'Старший администратор', username: '@DmitryJuly2001', icon: 'Shield' },
+                  { role: 'Основатель', username: '@Bar_golubaya_ustritsa', telegramUrl: 'https://t.me/Bar_golubaya_ustritsa', icon: 'Crown' },
+                  { role: 'Старший администратор', username: '@DmitryJuly2001', telegramUrl: 'https://t.me/DmitryJuly2001', icon: 'Shield' },
                 ].map((admin, idx) => (
-                  <Card key={idx} className="p-6 bg-background border-border hover-scale">
-                    <div className="flex items-start gap-4">
+                  <Card key={idx} className="p-6 bg-background border-border hover-scale cursor-pointer">
+                    <a href={admin.telegramUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4">
                       <div className="p-3 rounded-lg bg-accent/10">
                         <Icon name={admin.icon} size={24} className="text-accent" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold mb-1">{admin.role}</h3>
-                        <p className="text-accent text-sm">{admin.username}</p>
+                        <p className="text-accent text-sm hover:underline">{admin.username}</p>
                       </div>
-                    </div>
+                    </a>
                   </Card>
                 ))}
               </div>
