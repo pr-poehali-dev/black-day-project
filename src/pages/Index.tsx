@@ -432,13 +432,19 @@ const Index = () => {
                 <div>
                   <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                     <Icon name="Cpu" size={28} className="text-accent" />
-                    Технологии войны
+                    Технологии Лиграна
                   </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                     Технологический уровень стран представляет собой уникальную смесь эпох: 
                     <span className="text-accent font-semibold"> тактика и стратегия Первой мировой войны</span>, 
                     техника уровня Второй мировой, а также дроны и беспилотники современных конфликтов. 
                     Эта комбинация создает беспрецедентно жестокое и непредсказуемое поле боя.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Технологии на Лигране чуть лучше обычных — не совсем летающие машины, 
+                    но <span className="text-accent font-semibold">более продвинутый подход к проблемам и их решениям</span>. 
+                    Инженерная мысль здесь развивается иначе, с большим упором на практичность 
+                    и адаптацию к условиям постоянных конфликтов.
                   </p>
                 </div>
 
