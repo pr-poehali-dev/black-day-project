@@ -10,7 +10,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'admins', 'social', 'resources', 'lore'];
+      const sections = ['about', 'admins', 'social', 'resources', 'states', 'lore'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -41,6 +41,7 @@ const Index = () => {
     { id: 'admins', label: 'Администраторы', icon: 'Users' },
     { id: 'social', label: 'Соцсети', icon: 'Share2' },
     { id: 'resources', label: 'Важные ресурсы', icon: 'Link' },
+    { id: 'states', label: 'Государства', icon: 'Flag' },
     { id: 'lore', label: 'Лор мира', icon: 'Scroll' },
   ];
 
@@ -251,6 +252,67 @@ const Index = () => {
                         <p className="text-muted-foreground">{resource.desc}</p>
                       </div>
                       <Icon name="ChevronRight" size={20} className="text-muted-foreground" />
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="states" className="min-h-screen flex items-center bg-card">
+          <div className="container mx-auto px-6 py-20">
+            <div className="max-w-4xl">
+              <h2 className="text-5xl md:text-7xl font-bold mb-6 text-accent">Государства</h2>
+              <Separator className="mb-12 bg-accent" />
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  { 
+                    name: 'Азурское королевство', 
+                    desc: 'Одно из государств-разжигателей Первой континентальной войны. Бывшая часть Ллургийской империи.',
+                    icon: 'Crown',
+                    color: 'bg-blue-500/10'
+                  },
+                  { 
+                    name: 'Саксен-Андусская империя', 
+                    desc: 'Главный противник Азурского королевства. Разжигатель войны, дико ненавидящий своего соседа.',
+                    icon: 'Swords',
+                    color: 'bg-yellow-500/10'
+                  },
+                  { 
+                    name: 'Республика Бургурий', 
+                    desc: 'Государство, пережившее гражданскую войну по типу югославского конфликта 1991-2000 годов.',
+                    icon: 'Flame',
+                    color: 'bg-red-500/10'
+                  },
+                  { 
+                    name: 'Лиранская республика', 
+                    desc: 'Одно из государств континента Лигран, сформировавшееся после распада империи.',
+                    icon: 'Building',
+                    color: 'bg-pink-500/10'
+                  },
+                  { 
+                    name: 'Ллургийская империя (бывшая)', 
+                    desc: 'Великая империя, распавшаяся в 1681 году после 10-летней войны. Аналог Римской империи.',
+                    icon: 'Castle',
+                    color: 'bg-purple-500/10'
+                  },
+                  { 
+                    name: 'Новоградская республика', 
+                    desc: 'Государство, возникшее на обломках Ллургийской империи в северной части континента.',
+                    icon: 'Landmark',
+                    color: 'bg-gray-500/10'
+                  },
+                ].map((state, idx) => (
+                  <Card key={idx} className="p-6 bg-background border-border hover:border-accent transition-all hover-scale">
+                    <div className="flex items-start gap-4">
+                      <div className={`p-3 rounded-lg ${state.color}`}>
+                        <Icon name={state.icon} size={24} className="text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-2">{state.name}</h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{state.desc}</p>
+                      </div>
                     </div>
                   </Card>
                 ))}
