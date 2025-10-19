@@ -157,10 +157,30 @@ const Index = () => {
             <div className="max-w-4xl">
               <h2 className="text-5xl md:text-7xl font-bold mb-6 text-accent">Важные ресурсы</h2>
               <Separator className="mb-12 bg-accent" />
-              <div className="space-y-4">
+              <div className="space-y-6">
+                <Card className="p-6 bg-background border-border">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4">
+                      <div className="p-3 rounded-lg bg-accent/10">
+                        <Icon name="Map" size={24} className="text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold">Карта мира</h3>
+                        <p className="text-muted-foreground">Политическая карта Лиграна</p>
+                      </div>
+                    </div>
+                    <div className="rounded-lg overflow-hidden border border-border">
+                      <img 
+                        src="https://cdn.poehali.dev/files/8855ea32-ee68-4ce9-92e7-9586dd5d74d8.png" 
+                        alt="Политическая карта Лиграна" 
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </div>
+                </Card>
+
                 {[
                   { title: 'Библиотека историй', desc: 'Полная коллекция произведений вселенной', icon: 'Library' },
-                  { title: 'Карта мира', desc: 'Интерактивная карта территорий и локаций', icon: 'Map' },
                   { title: 'Хронология событий', desc: 'Временная шкала ключевых моментов', icon: 'Clock' },
                   { title: 'Энциклопедия персонажей', desc: 'База данных всех героев и антагонистов', icon: 'User' },
                   { title: 'Правила мира', desc: 'Законы и механики вселенной', icon: 'FileText' },
