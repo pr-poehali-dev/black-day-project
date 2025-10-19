@@ -132,16 +132,15 @@ const Index = () => {
               <Separator className="mb-12 bg-accent" />
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {[
-                  { name: 'Telegram', icon: 'MessageCircle', url: '#' },
-                  { name: 'VKontakte', icon: 'AtSign', url: '#' },
-                  { name: 'Discord', icon: 'Users', url: '#' },
-                  { name: 'YouTube', icon: 'Video', url: '#' },
-                  { name: 'Instagram', icon: 'Image', url: '#' },
-                  { name: 'Twitter', icon: 'Twitter', url: '#' },
+                  { name: 'VKontakte', icon: 'Users', url: 'https://vk.com/bd_2056' },
+                  { name: 'Telegram', icon: 'MessageCircle', url: 'https://t.me/BD_2056_official_tg' },
+                  { name: 'Author.Today', icon: 'BookOpen', url: 'http://author.today/u/buuund' },
                 ].map((social, idx) => (
                   <a
                     key={idx}
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent hover:text-background transition-all hover-scale"
                   >
                     <Icon name={social.icon} size={24} />
