@@ -234,6 +234,48 @@ const Index = () => {
                     между выжившими нациями, которая спустя столетия вылилась в континентальные войны.
                   </p>
                 </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <Icon name="Crown" size={28} className="text-accent" />
+                    Ллургийская империя
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                    Ранее, до всех указанных событий 29-39 годов, существовала так называемая 
+                    <span className="text-accent font-semibold"> Ллургийская империя</span> — 
+                    аллегория на Римскую империю. В отличие от римской, Ллургийская империя 
+                    под своей тяжестью и разным этническим составом была пороховой бочкой, 
+                    которая взорвалась в <span className="text-accent font-semibold">1681 году</span>, 
+                    распавшись в 10-летней войне на кучу независимых государств.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <Icon name="Swords" size={28} className="text-accent" />
+                    Разжигатели войны
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Возвращаясь к Первой континентальной войне: её разжигателями, подобно Сербии и Австро-Венгрии, 
+                    стали <span className="text-accent font-semibold">Азурское королевство</span> и 
+                    <span className="text-accent font-semibold"> Саксен-Андусская империя</span>. 
+                    Обе были частью Ллургийской империи и дико ненавидят друг друга настолько, 
+                    что готовы объявить войну прямо сейчас.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <Icon name="Flame" size={28} className="text-accent" />
+                    Республика Бургурий
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Второе состояние мира называется <span className="text-accent font-semibold">"Югославия 1991-2000 годов"</span>. 
+                    Речь идёт о гражданской войне в <span className="text-accent font-semibold">Республике Бургурий</span>. 
+                    Подобно Югославии, она распалась, совершая военные преступления на территории противника — 
+                    ещё один шрам на теле истерзанного мира.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
